@@ -1,0 +1,41 @@
+# HTML - Hyper Text Markup Language
+    - The structure and content of your webpage
+    - Tags: <p> </p> ...
+        - Self-closing tags: </br> </img> even <br> <img>
+    - Using correct elements for content is called semantic HTML
+    
+
+# Format
+
+[html]
+
+<!DOCTYPE html>
+<html> 
+    <head>
+    </head>
+    <body>
+        <h1> </h1>
+        <h2> </h2>
+        <h3> </h3>
+        <p> </p>
+        <u1>
+            <li> </li>
+            <li> </li>
+        </u1>
+    </body>
+</html>
+
+[/html]
+
+# CSS - Cascading Style Sheets
+    - Improve appearance of a web page
+    - CSS Selectors: select an element an alter its appearance
+
+# JavaScript
+    - The programming language
+    - You program actions, conditions, calculations, network requests, concurrent tasks and many other kind of
+    instructions
+
+    - Access elements through DOM (DOcument Object Model API)
+        - Tree-like representation of the web page
+        
