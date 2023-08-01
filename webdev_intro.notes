@@ -30,6 +30,41 @@
     - Improve appearance of a web page
     - CSS Selectors: select an element an alter its appearance
 
+    - ruleset:
+        selector{
+            property: value;
+        }
+
+    - ex:
+        [css]
+        div.bold-text{
+            font-weight: bold;
+            color: red;
+            height: 200px;
+        }
+        [/css]
+
+    - *{} - universal selector 
+    
+    - targetting a class
+        .class{...} 
+    
+    - targetting an id (unlike a class, its name must be unique) (!better to use class for targetting!)
+        #id{...}
+
+    - targetting multiple Selectors
+        h1, a {...}
+    
+    - targetting multiple classes
+        .class1, class2{...}
+
+    - chaining selectors
+        .class1.class12
+    
+    - targetting selectors within a specific class
+        .class selector1 selector2, .class selector2{...}
+
+
 # JavaScript
     - The programming language
     - You program actions, conditions, calculations, network requests, concurrent tasks and many other kind of
