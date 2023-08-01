@@ -64,6 +64,12 @@
     - targetting selectors within a specific class
         .class selector1 selector2, .class selector2{...}
 
+    - Cascade from the C in CSS:
+        - Specificity - A CSS declaration that is more specific will take precedence over less specific ones
+            1. ID selectors (most specific selector)
+            2. Class selectors
+            3. Type selectors
+
 
 # JavaScript
     - The programming language

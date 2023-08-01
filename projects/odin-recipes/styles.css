@@ -1,0 +1,89 @@
+*{
+    background-color: gray;
+    margin: 25px 50px 75px 100px;
+}
+
+.recipe-page h1{
+    background-color: black;
+    text-align: center;
+    border-width: 5px;
+    border-radius: 200px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.recipe-page a{
+    font-size: 30px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.main{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.main img{
+    width: 700px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main h1, h2, h3, h4, h5{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.ingredients{
+    margin-left: 0px;
+}
+
+.main h1{
+    color: white;
+    border-style: solid;
+    border-color: rgb(109, 20, 20);
+    border-width: 5px;
+    border-radius: 200px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 45px;
+}
+
+.main p, li, ul, ol{
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.ingredients p{
+    margin-left: 60px;
+}
+
+.main li{
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.main a{
+    font-size: 25px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
