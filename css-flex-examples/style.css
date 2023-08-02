@@ -1,0 +1,26 @@
+*{
+    background-color: gray;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    
+}
+
+div{
+    border: 2px solid black;
+    text-align: center;
+}
+
+.search{
+    flex: 3 3 400px;
+}
+
+.home, .logout{
+    flex: 1 1 100px;
+}
+
+
+

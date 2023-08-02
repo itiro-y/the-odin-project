@@ -70,6 +70,17 @@
             2. Class selectors
             3. Type selectors
 
+    - divs and spans
+        - divs for general blocks of things
+        - spans for blocks of something within a text
+        - important when using display:blocks-inline!
+    
+    - display: flex
+        - flex: flex-grow, flex-shrink, flex-basis
+            - flex: 1 -> 1, 1, 0
+        - To center our box we use the !align-items! property to align our item on the cross axis, which in this 
+        case is the block axis running vertically. We use !justify-content! to align the item on the main axis
+
 
 # JavaScript
     - The programming language
