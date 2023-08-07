@@ -90,5 +90,37 @@
     - Access elements through DOM (DOcument Object Model API)
         - Tree-like representation of the web page
 
+    - Variables
+        - let / const
+
+    - Functions
+        - Arrow Functions
+            - let func = function(arg1, arg2, ..., argN) {
+                return expression; };
+    
+    - Loops
+        - forEach((parameter1, parameter2, ...) => {what to do with each item})
+    
+    - Arrays
+        - useful methods
+            - length, includes(), push(), pop(), filter()
+
+    - Rest operator
+        -  ...elements as parameter turns the parameters separated with a comma into an array of those items
+
+    - Acessing DOM
+        - element.querySelector(selector) -> returns a reference to the first match of selector  
+            - ex. 
+                html
+                <div id='container'>blabla</div>
+
+                js
+                const container = document.querySelector('#container');
+        
+        - element.querySelectorAll(selectors) returns a “nodelist” containing references to all of the matches of the selectors
+            - can convert the nodelist into an array using .from()
+
+        
+
     
         
