@@ -1,3 +1,7 @@
+// Global variables
+let playerWinCount = 0;
+let cpuWinCount = 0;
+
 function getComputerChoice(){
     const choiceArr = ["Rock", "Paper", "Scissor"];
     // Math.floor(Math.random() * (max - min) ) + min;
@@ -6,53 +10,80 @@ function getComputerChoice(){
     return choiceArr[randomNum];
 }
 
-function playRound(playersSelection, computerSelection){
+function playRound(playersSelection, computerSelection, e){
+    const playerChoice = document.querySelector('.player > p');
+    const cpuChoice = document.querySelector('.cpu > p');
+    const roundResult = document.querySelector('.round-result > p');
+    const playerWinC = document.querySelector('.results-box > .player-result');
+    const cpuWinC = document.querySelector('.results-box > .cpu-result');
+
+
+    playerChoice.textContent = "You played " + playersSelection;
+    cpuChoice.textContent = "CPU played " + computerSelection;
+
+
     if(playersSelection == computerSelection){
-        return "Draw";
+        roundResult.textContent = "Draw";
     }
     
     if(computerSelection == "Rock"){
-        if(playersSelection == "Paper")
-            return "The player wins!";
-        if(playersSelection == "Scissor")
-            return "The computer wins!";
+        if(playersSelection == "Paper"){
+            roundResult.textContent = "The player won this round!";
+            playerWinCount++;
+            playerWinC.textContent = Number(playerWinCount);
+        }
+        if(playersSelection == "Scissor"){
+            roundResult.textContent = "The computer won this round!";
+            cpuWinCount++;
+            cpuWinC.textContent = Number(cpuWinCount);
+        }
     }
     
     if(computerSelection == "Paper"){
-        if(playersSelection == "Rock")
-            return "The computer wins!";
-        if(playersSelection == "Scissor")
-            return "The player wins!";
+        if(playersSelection == "Rock"){
+            roundResult.textContent = "The computer won this round!";
+            cpuWinCount++;
+            cpuWinC.textContent = Number(cpuWinCount);
+        }
+        if(playersSelection == "Scissor"){
+            roundResult.textContent = "The player won this round!";
+            playerWinCount++;
+            playerWinC.textContent = Number(playerWinCount);
+        }
     }
 
     if(computerSelection == "Scissor"){
-        if(playersSelection == "Rock")
-            return "The player wins!";
-        if(playersSelection == "Paper")
-            return "The computer wins!";
+        if(playersSelection == "Rock"){
+            roundResult.textContent = "The player won this round!";
+            playerWinCount++;
+            playerWinC.textContent = Number(playerWinCount);
+        }
+        if(playersSelection == "Paper"){
+            roundResult.textContent = "The computer won this round!";
+            cpuWinCount++;
+            cpuWinC.textContent = Number(cpuWinCount);
+        }
     }
+
+    const gameResults = document.querySelector('.game-result');
+    if(playerWinCount >= 5){
+        gameResults.textContent = "The player won the game!!!"
+    }
+    else if(cpuWinCount >= 5){
+        gameResults.textContent = "The CPU won the game!!!"
+    }
+    else
+        null;
 }
 
 function game(){
-    let playerWinCount = 0;
-    let computWinCount = 0;
-    for(let i = 0; i < 6; i++){
-        let playersSelection = prompt("It's your turn! Rock, Paper or Scissor? (Caps matters!)");
-        const computerSelection = getComputerChoice()
-        console.log("The player chose " + playersSelection + "\nThe computer chose " + computerSelection);
-        let results = playRound(playersSelection, computerSelection)
-        console.log(results);
-        if(results == "The computer wins!")
-            computWinCount++;
-        if(results == "The player wins!")
-            playerWinCount++;
-    }
-    if(computWinCount == playerWinCount)
-        console.log("It was a draw!");
-    else if(computWinCount > playerWinCount)
-        console.log("The computer won the game!");
-    else
-        console.log("The player won the game!");
+    const button_1 = document.querySelector('.buttons > .button1'); //rock
+    const button_2 = document.querySelector('.buttons > .button2'); //paper
+    const button_3 = document.querySelector('.buttons > .button3'); //scissors
+
+    button_1.addEventListener('click', (e) => console.log(playRound("Rock", getComputerChoice(), e)));
+    button_2.addEventListener('click', (e) => console.log(playRound("Paper", getComputerChoice(), e)));
+    button_3.addEventListener('click', (e) => console.log(playRound("Scissor", getComputerChoice(), e)));
 }
 
 game();
